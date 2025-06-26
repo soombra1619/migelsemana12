@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Planetas del Sistema Solar</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-image: url('https://res.cloudinary.com/dmcvdsh4c/image/upload/v1731955523/iceebook/espacio/espacio-exterior-que-es-caracteristicas-composicion_bno85b.webp');
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      padding: 20px;
+    }
+
+    .container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 30px;
+      justify-content: center;
+      max-width: 1200px;
+    }
+
+    .card {
+      width: 220px;
+      height: 360px;
+      perspective: 1000px;
+      transition: transform 0.3s;
+    }
+
+    .card:hover {
+      transform: scale(1.05);
+    }
+
+    .card-inner {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      transition: transform 0.8s;
+      transform-style: preserve-3d;
+      cursor: pointer;
+      border-radius: 15px;
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.6);
+    }
+
+    .card:hover .card-inner {
+      transform: rotateY(180deg);
+    }
+
+    .card-front, .card-back {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      border-radius: 15px;
+      backface-visibility: hidden;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 15px;
+      color: white;
+      text-align: center;
+    }
+
+    .card-front {
+      background: rgba(44, 62, 80, 0.7); /* azul oscuro translúcido */
+    }
+
+    .card-back {
+      background: rgba(107, 107, 107, 0.7); /* morado translúcido */
+      transform: rotateY(180deg);
+    }
+
+    .card-front img {
+      width: 100px;
+      height: 100px;
+      object-fit: cover;
+      border-radius: 50%;
+      border: 3px solid white;
+      margin-bottom: 12px;
+      box-shadow: 0 0 10px rgba(255, 255, 255, 0.4);
+    }
+
+    .card-front p {
+      margin: 4px 0;
+      font-size: 0.95rem;
+    }
+
+    h2 {
+      font-size: 1.3rem;
+      margin-bottom: 10px;
+    }
+
+    p {
+      font-size: 0.95rem;
+      line-height: 1.4;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+
+    <!-- Mercurio -->
+    <div class="card">
+      <div class="card-inner">
+        <div class="card-front">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/4/4a/Mercury_in_true_color.jpg" alt="Mercurio">
+          <h2>Mercurio</h2>
+          <p><strong>Diámetro:</strong> 4,879 km</p>
+          <p><strong>Órbita:</strong> 88 días</p>
+        </div>
+        <div class="card-back">
+          <h2>Dato Curioso</h2>
+          <p>Mercurio es el planeta más cercano al Sol y no tiene atmósfera.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Venus -->
+    <div class="card">
+      <div class="card-inner">
+        <div class="card-front">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/e/e5/Venus-real_color.jpg" alt="Venus">
+          <h2>Venus</h2>
+          <p><strong>Diámetro:</strong> 12,104 km</p>
+          <p><strong>Órbita:</strong> 225 días</p>
+        </div>
+        <div class="card-back">
+          <h2>Dato Curioso</h2>
+          <p>Venus gira en dirección opuesta a casi todos los demás planetas.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Tierra -->
+    <div class="card">
+      <div class="card-inner">
+        <div class="card-front">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/c/cb/The_Blue_Marble_%28remastered%29.jpg" alt="Tierra">
+          <h2>Tierra</h2>
+          <p><strong>Diámetro:</strong> 12,742 km</p>
+          <p><strong>Órbita:</strong> 365 días</p>
+        </div>
+        <div class="card-back">
+          <h2>Dato Curioso</h2>
+          <p>La Tierra es el único planeta conocido que alberga vida.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Marte -->
+    <div class="card">
+      <div class="card-inner">
+        <div class="card-front">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/0/02/OSIRIS_Mars_true_color.jpg" alt="Marte">
+          <h2>Marte</h2>
+          <p><strong>Diámetro:</strong> 6,779 km</p>
+          <p><strong>Órbita:</strong> 687 días</p>
+        </div>
+        <div class="card-back">
+          <h2>Dato Curioso</h2>
+          <p>Marte tiene el volcán más grande del sistema solar: el Olympus Mons.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Júpiter -->
+    <div class="card">
+      <div class="card-inner">
+        <div class="card-front">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/e/e2/Jupiter.jpg" alt="Júpiter">
+          <h2>Júpiter</h2>
+          <p><strong>Diámetro:</strong> 139,820 km</p>
+          <p><strong>Órbita:</strong> 11.9 años</p>
+        </div>
+        <div class="card-back">
+          <h2>Dato Curioso</h2>
+          <p>Júpiter es tan grande que cabrían más de 1,300 Tierras dentro de él.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Saturno -->
+    <div class="card">
+      <div class="card-inner">
+        <div class="card-front">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/c/c7/Saturn_during_Equinox.jpg" alt="Saturno">
+          <h2>Saturno</h2>
+          <p><strong>Diámetro:</strong> 116,460 km</p>
+          <p><strong>Órbita:</strong> 29.5 años</p>
+        </div>
+        <div class="card-back">
+          <h2>Dato Curioso</h2>
+          <p>Saturno tiene los anillos más brillantes y extensos del sistema solar.</p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</body>
+</html>
